@@ -1,16 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import ErrorDemo from "./error-boundaries/ErrorDemo";
-import CancelPromise from "./cancel-promise/CancelPromise";
-import EffectHook from "./effect-hook/EffectHook";
-import ContextDemo from "./context-demo/ContextDemo";
-import HigherOrderComponent from "./higher-order-component/HigherOrderComponent";
-import Memoization from "./memo-demo/Memoization";
-import DynamicComponents from "./dynamic-components/DynamicComponents";
-import ReduxCounter from "./redux-counter/ReduxCounter";
-import ReduxCounterBP from "./redux-counter-best/ReduxContainer";
-import ReduxToolkitCounter from "./redux-counter-tk/ReduxContainer";
-import VisibilityDemo from "./visibility-tests/VisibilityDemo";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import ErrorBoundaryDemo from './error-boundaries/ErrorBoundaryDemo';
+import CancelPromise from './cancel-promise/CancelPromise';
+import EffectHook from './effect-hook/EffectHook';
+import ContextDemo from './context-demo/ContextDemo';
+import HigherOrderComponent from './higher-order-component/HigherOrderComponent';
+import Memoization from './memo-demo/Memoization';
+import DynamicComponents from './dynamic-components/DynamicComponents';
+import ReduxCounter from './redux-counter/ReduxCounter';
+import ReduxCounterBP from './redux-counter-best/ReduxContainer';
+import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer';
+import VisibilityDemo from './visibility-tests/VisibilityDemo';
 
 function App() {
   return (
@@ -55,9 +55,7 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to="redux-toolkit-counter">
-                  Redux Counter (using the toolkit)
-                </Link>
+                <Link to="redux-toolkit-counter">Redux Counter (using the toolkit)</Link>
               </li>
               <li>
                 <Link to="visibility-demo">Visbility Demo</Link>
@@ -67,7 +65,7 @@ function App() {
           <div className="column">
             <Switch>
               <Route path="/error-boundaries">
-                <ErrorDemo />
+                <ErrorBoundaryDemo />
               </Route>
               <Route path="/cancel-promise">
                 <CancelPromise />

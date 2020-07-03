@@ -11,19 +11,17 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('error: ', error);
-    console.error('errorInfo: ', errorInfo);
+    console.error('ErrorBoundary.componentDidCatch() -> error: ', error);
+    console.error('ErrorBoundary.componentDidCatch() -> errorInfo: ', errorInfo);
   }
 
   render() {
-    console.log('Error level: ' + this.props.level || 'none');
-    if (this.state.hasError) {
-      return this.props.errorComponent ? (
-        this.props.errorComponent
-      ) : (
-        <p>Not what we expected</p>
-      );
-    }
-    return this.props.children;
+    return (
+      <div style={{ border: '2px red dashed', padding: '5px' }}>
+        {!this.state.hasError
+          ? this.props.children
+          : this.props.errorComponent ?? <p>No error component provided</p>}
+      </div>
+    );
   }
 }

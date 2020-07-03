@@ -3,10 +3,17 @@ import './VisibilityDemo.css';
 
 function VisibilityDemo() {
   const [domPresent, setDOMPresent] = useState(true);
-  const [visible, setVisible] = useState('visible');
+  const [visible, setVisible] = useState('visible'); // possible values are 'visible', 'hidden', 'collapse'
   const [displayValue, setDisplayValue] = useState('block');
   const [opaque, setOpacity] = useState(1.0);
   const [hidden, setHidden] = useState(false);
+
+  /*
+  let element = <Box data-testid="DOM" />;
+  if (!domPresent) {
+    element = '';
+  }
+  */
 
   return (
     <>
@@ -14,7 +21,8 @@ function VisibilityDemo() {
         <div className="column">
           <h3>In the DOM</h3>
           <div className="container-box">
-            {domPresent ? <Box data-testid="DOM" /> : ''}
+            {domPresent ? <Box data-testid="DOM" /> : null}
+            {/* {element} */}
           </div>
           <button
             className="button is-primary is-small"
