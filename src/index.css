@@ -1,9 +1,4 @@
-@import url('../node_modules/bulma/css/bulma.css');
-@import url('../node_modules/bulma-helpers/css/bulma-helpers.css');
-
-.list-unstyled {
-  list-style-type: none;
-}
+@import url('../node_modules/bootstrap/dist/css/bootstrap.css');
 
 .is-wrapped {
   white-space: normal;

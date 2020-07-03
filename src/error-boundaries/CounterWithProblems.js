@@ -18,7 +18,7 @@ const CounterWithProblems = () => {
       <hr />
       <BadCounter count={count} />
       <div style={{ marginTop: '10px' }}>
-        <button className="button is-primary" onClick={() => setCount(count + 1)}>
+        <button className="btn btn-primary" onClick={() => setCount(count + 1)}>
           Click Me
         </button>
       </div>

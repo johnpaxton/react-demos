@@ -16,14 +16,14 @@ function App() {
   return (
     <Router>
       <main className="container">
-        <header className="columns">
-          <div className="column">
-            <h1 className="title is-size-1">React Demos</h1>
+        <header className="row">
+          <div className="col">
+            <h1>React Demos</h1>
             <hr />
           </div>
         </header>
-        <div className="columns">
-          <div className="column">
+        <div className="row">
+          <div className="col">
             <ul className="list-unstyled">
               <li>
                 <Link to="error-boundaries">Error Boundaries</Link>
@@ -62,7 +62,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="column">
+          <div className="col">
             <Switch>
               <Route path="/error-boundaries">
                 <ErrorBoundaryDemo />

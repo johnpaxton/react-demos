@@ -8,76 +8,66 @@ function VisibilityDemo() {
   const [opaque, setOpacity] = useState(1.0);
   const [hidden, setHidden] = useState(false);
 
-  /*
-  let element = <Box data-testid="DOM" />;
-  if (!domPresent) {
-    element = '';
-  }
-  */
-
   return (
     <>
-      <div className="columns">
-        <div className="column">
+      <div className="row">
+        <div className="col">
           <h3>In the DOM</h3>
           <div className="container-box">
             {domPresent ? <Box data-testid="DOM" /> : null}
             {/* {element} */}
           </div>
           <button
-            className="button is-primary is-small"
+            className="btn btn-sm btn-primary"
             onClick={() => setDOMPresent(!domPresent)}
           >
             Toggle DOM
           </button>
         </div>
-        <div className="column">
+        <div className="col">
           <h3>Visibility</h3>
           <div className="container-box">
             <Box style={{ visibility: visible }} data-testid="visibility" />
           </div>
           <button
-            className="button is-primary is-small"
+            className="btn btn-sm btn-primary"
             onClick={() => setVisible(visible === 'visible' ? 'hidden' : 'visible')}
           >
             Toggle Visibility
           </button>
         </div>
-        <div className="column">
+        <div className="col">
           <h3>Display</h3>
           <div className="container-box">
             <Box style={{ display: displayValue }} data-testid="display" />
           </div>
           <button
-            className="button is-primary is-small"
+            className="btn btn-sm btn-primary"
             onClick={() => setDisplayValue(displayValue === 'block' ? 'none' : 'block')}
           >
             Toggle Display
           </button>
         </div>
       </div>
-      <div className="columns">
-        <div className="column">
+      <div className="row">
+        <div className="col">
           <h3>Opacity</h3>
           <div className="container-box">
             <Box style={{ opacity: opaque }} data-testid="opacity" />
           </div>
           <button
-            className="button is-primary is-small"
+            className="btn btn-sm btn-primary"
             onClick={() => setOpacity(opaque === 1 ? 0 : 1)}
           >
             Toggle Opacity
           </button>
         </div>
-        <div className="column">
+        <div className="col">
           <h3>Hidden</h3>
           <div className="container-box">
             <Box hidden={hidden} data-testid="hidden" />
           </div>
-          <button
-            className="button is-primary is-small"
-            onClick={() => setHidden(!hidden)}
-          >
+          <button className="btn btn-sm btn-primary" onClick={() => setHidden(!hidden)}>
             Toggle Hidden
           </button>
         </div>
