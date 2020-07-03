@@ -55,12 +55,10 @@ describe('ErrorBoundary', () => {
     };
 
     const { getByText } = render(
-      <ErrorBoundary errorComponent={<CustomError />}>
+      <ErrorBoundary errorComponent={CustomError}>
         <Throws />
       </ErrorBoundary>,
     );
-
-    // console.log("container.querySelector('p'): ", container.querySelector('p'));
 
     expect(getByText(/Custom error message/)).toBeInTheDocument();
   });
