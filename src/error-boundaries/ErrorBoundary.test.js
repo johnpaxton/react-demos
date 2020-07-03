@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ErrorBoundary from './ErrorBoundary';
 import { BadCounter } from './CounterWithProblems';
@@ -55,12 +55,10 @@ describe('ErrorBoundary', () => {
     };
 
     const { getByText } = render(
-      <ErrorBoundary errorComponent={<CustomError />}>
+      <ErrorBoundary errorComponent={CustomError}>
         <Throws />
       </ErrorBoundary>,
     );
-
-    // console.log("container.querySelector('p'): ", container.querySelector('p'));
 
     expect(getByText(/Custom error message/)).toBeInTheDocument();
   });

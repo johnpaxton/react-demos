@@ -16,7 +16,7 @@ const ErrorDemo = () => {
         </p>
       </div>
       <section>
-        <ErrorBoundary errorComponent={<ShowError />}>
+        <ErrorBoundary errorComponent={ShowError}>
           <CounterWithProblems />
         </ErrorBoundary>
       </section>

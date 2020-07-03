@@ -16,11 +16,11 @@ export default class ErrorBoundary extends Component {
   }
 
   render() {
+    const errorComponent =
+      this.props.errorComponent ?? (() => <p>No error component provided</p>);
     return (
       <div style={{ border: '2px red dashed', padding: '5px' }}>
-        {!this.state.hasError
-          ? this.props.children
-          : this.props.errorComponent ?? <p>No error component provided</p>}
+        {!this.state.hasError ? this.props.children : errorComponent()}
       </div>
     );
   }
